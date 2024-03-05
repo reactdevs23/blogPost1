@@ -68,6 +68,9 @@
   gap: 12px;
   background: var(--bg);
 }
+.fullWidth {
+  grid-column: 1/-1;
+}
 
 .title {
   color: var(--color);
@@ -87,8 +90,32 @@
   font-weight: 400;
   line-height: 22px;
 }
-.practicalTips .info {
-  padding-left: 30px;
+
+.tips {
+  display: flex;
+  gap: 12px;
+}
+.id {
+  color: var(--color);
+  background: var(--bg);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50%;
+
+  min-width: 25px;
+
+  height: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  padding-left: 6px;
 }
 .tagline {
   font-weight: 600;

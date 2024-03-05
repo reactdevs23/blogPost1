@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./MainComponent.module.css";
+import { data } from "autoprefixer";
 
 const MainComponent = ({
   header,
@@ -112,7 +113,11 @@ const MainComponent = ({
                   </div>
                 ))}
                 <div
-                  className={[classes.box, classes.practicalTips].join(" ")}
+                  className={[
+                    classes.box,
+                    classes.practicalTips,
+                    mainContent.contents.length % 2 === 0 && classes.fullWidth,
+                  ].join(" ")}
                   style={{
                     "--border": mainContent.practicalTips.border,
                     "--bg": mainContent.practicalTips.bg,
@@ -126,14 +131,27 @@ const MainComponent = ({
                   </h2>
 
                   {mainContent.practicalTips.data.map((el, i) => (
-                    <p
-                      className={classes.info}
-                      style={{ "--color": mainContent.practicalTips.infoColor }}
-                      key={i}
-                    >
-                      <span className={classes.subTitle}>{el.subTitle}</span>
-                      {el.info}
-                    </p>
+                    <div className={classes.tips}>
+                      <p
+                        className={classes.id}
+                        style={{
+                          "--bg": mainContent.practicalTips.idBg,
+                          "--color": mainContent.practicalTips.idColor,
+                        }}
+                      >
+                        {i + 1}
+                      </p>
+                      <p
+                        className={classes.info}
+                        style={{
+                          "--color": mainContent.practicalTips.infoColor,
+                        }}
+                        key={i}
+                      >
+                        <span className={classes.subTitle}>{el.subTitle}</span>
+                        {el.info}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>

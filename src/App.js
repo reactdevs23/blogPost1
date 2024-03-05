@@ -136,6 +136,8 @@ function App() {
         border: "1px solid #155EEF",
         bg: "#155EEF",
         infoColor: "#fff",
+        idColor: "#000",
+        idBg: "#fff",
         data: [
           {
             subTitle: "Start small: ",
