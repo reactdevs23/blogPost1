@@ -131,7 +131,7 @@ const MainComponent = ({
                   </h2>
 
                   {mainContent.practicalTips.data.map((el, i) => (
-                    <div className={classes.tips}>
+                    <div className={classes.tips} key={i}>
                       <p
                         className={classes.id}
                         style={{
